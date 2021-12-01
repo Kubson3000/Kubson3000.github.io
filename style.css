@@ -31,4 +31,16 @@
 }
 #foot {
 	height: 20%;
+	padding: 15px;
+	background-color: grey;
+}
+#middle_top {
+	text-align: center;
+	padding: 10px;
+}
+#middle_bottom {
+	margin-top: 3%;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: center;
 }
