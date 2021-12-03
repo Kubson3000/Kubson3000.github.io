@@ -1,0 +1,50 @@
+*{
+	padding: 0px;
+}
+#cont {
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 60%;
+}
+#banner {
+	height: 20%;
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	background-color: pink;
+}
+#left {
+	width: 20%;
+	height: 650px;
+	float: left;
+	background-color: blue;
+}
+#middle {
+	width: 60%;
+	height: 650px;
+	float: left;
+	background-color: black;
+	color: white;
+}
+#right {
+	width: 20%;
+	height: 650px;
+	float: left;
+	background-color: yellow;
+}
+#foot {
+	height: 20%;
+	padding: 15px;
+	background-color: grey;
+}
+#middle_top {
+	text-align: center;
+	padding: 10px;
+}
+#middle_bottom {
+	margin-top: 3%;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: center;
+}
