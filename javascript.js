@@ -30,9 +30,6 @@ function one(name) {
     let wid = document.getElementById("middle").offsetWidth - 20;
     var hei = Math.round(wid * 0.5625);
     var beg = '<iframe width="' + wid + '" height="' + hei;
-    console.log(wid);
-    console.log(hei);
-    console.log(beg);
     if (div.style.border == "inset") {
         div.style.border = 'none';
         out.innerHTML = s_zero;

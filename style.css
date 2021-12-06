@@ -34,6 +34,7 @@
 	background-color: yellow;
 }
 #foot {
+	clear: both;
 	height: 20%;
 	padding: 15px;
 	background-color: grey;
