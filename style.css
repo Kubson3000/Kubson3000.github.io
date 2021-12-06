@@ -1,6 +1,10 @@
+*{
+	padding: 0px;
+}
 #cont {
 	margin-left: 15%;
 	margin-right: 15%;
+	width: 70%;
 }
 #banner {
 	height: 20%;
@@ -43,4 +47,11 @@
 	margin-left: 5%;
 	margin-right: 5%;
 	text-align: center;
+}
+.clcbl {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.table {
+	border-spacing: 0;
 }
