@@ -27,6 +27,7 @@ function clear() {
 function one(name) {
     let div = document.getElementById(name);
     let out = document.getElementById("middle");
+    let wid = document.getElementById("middle").offsetWidth;
     if (div.style.border == "inset") {
         div.style.border = 'none';
         out.innerHTML = s_zero;
