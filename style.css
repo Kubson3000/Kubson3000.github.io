@@ -33,6 +33,15 @@
 	float: left;
 	background-color: yellow;
 }
+#trolin {
+	margin-top: 1%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+#right_space {
+	margin-top: 1%;
+	overflow-y: auto;
+}
 #foot {
 	clear: both;
 	height: 20%;
