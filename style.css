@@ -1,6 +1,10 @@
 *{
 	padding: 0px;
 }
+img {
+  width: 100%;
+  height: auto;
+}
 #cont {
 	margin-left: 15%;
 	margin-right: 15%;
