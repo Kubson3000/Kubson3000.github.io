@@ -1,0 +1,45 @@
+﻿#body {
+    background-color: black;
+}
+#cont {
+    background-color: saddlebrown;
+    position: absolute;
+    top: 7.5%;
+    left: 15%;
+    right: 15%;
+    bottom: 7.5%;
+}
+#top {
+    background-color: pink;
+    height: 10%;
+    font-size: 60px;
+}
+#top_name {
+    background-color: blue;
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+#name {
+    margin-top: 1%;
+    margin-left: 2%;
+}
+#tick {
+    margin-top: 1%;
+    margin-right: 2%;
+}
+#clock {
+    background-color: greenyellow;
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: right;
+}
+#middle {
+    background-color: aqua;
+    height: 80%;
+}
+#bottom {
+    background-color: darkred;
+    height: 10%;
+}
