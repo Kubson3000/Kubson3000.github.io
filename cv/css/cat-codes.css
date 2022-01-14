@@ -1,0 +1,5 @@
+
+.icon-user:before { content: '\e800'; } /* '' */
+.icon-mail:before { content: '\e801'; } /* '' */
+.icon-keyboard:before { content: '\f11c'; } /* '' */
+.icon-gitlab:before { content: '\f296'; } /* '' */
