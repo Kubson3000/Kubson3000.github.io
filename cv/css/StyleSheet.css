@@ -1,3 +1,6 @@
+*{
+	margin: 0px;
+}
 #body {
     background-color: black;
 }
@@ -12,7 +15,7 @@
 #top {
     background-color: pink;
     height: 10%;
-    font-size: 60px;
+    font-size: 55px;
 }
 #top_name {
     background-color: blue;
@@ -39,7 +42,31 @@
     background-color: aqua;
     height: 80%;
 }
+#middle_left {
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+#middle_right {
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+#main {
+	background-color: grey;
+	margin: 5%;
+	width: 90%;
+	height: 90%;
+}
 #bottom {
     background-color: darkred;
+	clear: both;
     height: 10%;
+}
+.sqrt {
+	background-color: red;
+	width: 40%;
+	height: 40%;
+	margin: 5%;
+	float: left;
 }
