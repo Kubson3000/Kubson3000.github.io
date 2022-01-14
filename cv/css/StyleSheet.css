@@ -66,6 +66,8 @@
 .sqrt {
 	background-color: #242457;
 	width: 90%;
+	height: 15%;
+	padding: 1%;
 	margin: 5%;
 	font-size: 50px;
 	color: white;
