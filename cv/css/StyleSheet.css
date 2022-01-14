@@ -65,10 +65,37 @@
 }
 .sqrt {
 	background-color: #242457;
-	width: 90%;
-	height: 15%;
-	padding: 1%;
+	width: 40%;
+	height: 40%;
 	margin: 5%;
+	float: left;
+	text-align: center;
 	font-size: 50px;
 	color: white;
+}
+.logo {
+	width: 40%;
+	height: 40%;
+	margin: 5%;
+	float: left;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+}
+.ico {
+	font-size: 80px;
+}
+.txt {
+	font-size: 40px;
+}
+.inside {
+	margin-top: 20%;
+}
+.face {
+	margin-top: 10%;
+	width: 60%;
+	height: auto;
+}
+.bigger {
+	font-size: 200px;
 }
