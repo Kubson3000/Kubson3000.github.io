@@ -1,0 +1,101 @@
+*{
+	margin: 0px;
+	text-decoration: none;
+	color: white;
+}
+#body {
+    background-color: black;
+}
+#cont {
+    background-color: #382131;
+    position: absolute;
+    top: 7.5%;
+    left: 15%;
+    right: 15%;
+    bottom: 7.5%;
+}
+#top {
+    background-color: #8f577e;
+    height: 10%;
+    font-size: 55px;
+}
+#top_name {
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+#name {
+    margin-top: 1%;
+    margin-left: 2%;
+}
+#tick {
+    margin-top: 1%;
+    margin-right: 2%;
+}
+#clock {
+    float: right;
+    width: 50%;
+    height: 100%;
+    text-align: right;
+}
+#middle {
+    background-color: #5e3752;
+    height: 80%;
+}
+#middle_left {
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+#middle_right {
+	float: left;
+	height: 100%;
+	width: 50%;
+}
+#main {
+	background-color: grey;
+	margin: 5%;
+	width: 90%;
+	height: 90%;
+	text-align: center;
+}
+#bottom {
+	clear: both;
+    height: 10%;
+}
+.sqrt {
+	background-color: #242457;
+	width: 40%;
+	height: 40%;
+	margin: 5%;
+	float: left;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+}
+.logo {
+	width: 40%;
+	height: 40%;
+	margin: 5%;
+	float: left;
+	text-align: center;
+	font-size: 50px;
+	color: white;
+}
+.ico {
+	font-size: 80px;
+}
+.txt {
+	font-size: 40px;
+}
+.inside {
+	margin-top: 20%;
+}
+.face {
+	margin-top: 10%;
+	width: 60%;
+	height: auto;
+}
+.bigger {
+	font-size: 200px;
+}
