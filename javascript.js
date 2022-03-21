@@ -1,6 +1,6 @@
 {
-    var s_zero = '<p>Select a game</p><div id = "middle_top" ></div><div id="middle_bottom"></div>';
-    var blank = '<div id = "middle_top" ></div><div id="middle_bottom"></div>';
+    var s_zero = '<article><p> Select a  game</p><header><div id="middle_top"></div></header><section><div id="middle_bottom"></div></section></article >';
+    var blank = '<article><header><div id="middle_top"></div></header><section><div id="middle_bottom"></div></section></article >';
     var senu = '" src="https://static.wikia.nocookie.net/f9b8d9fa-9a01-4a7d-8e86-a07eab3b3ca1/scale-to-width/755" />';
     var s_one_top = '" src="https://www.youtube.com/embed/XHrskkHf958" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
     var s_one_bottom = 'The Witcher 3: Wild Hunt is the third and final installment in the series of games developed by CD Projekt RED featuring the witcher Geralt of Rivia. The game was originally scheduled for release in late 2014, then pushed back to 24 February 2015, and finally released on 19 May 2015. During the first two weeks since release it had sold more than 4 million copies worldwide, more than doubling the total sales of its predecessor, The Witcher 2: Assassins of Kings.';
