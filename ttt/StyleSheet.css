@@ -1,0 +1,42 @@
+﻿:root {
+    --square_s: 50px;
+    --line_s: 10px;
+    --total_w: calc(var(--square_s) * 3 + var(--line_s) * 3 );
+}
+.square {
+    width: var(--square_s);
+    height: var(--square_s);
+    font-size: 25px;
+    float: left;
+}
+.vertical_line {
+    width: var(--line_s);
+    height: var(--square_s);
+    background-color: black;
+    float: left;
+}
+.horizontal_line {
+    width: var(--total_w);
+    height: var(--line_s);
+    background-color: black;
+    clear: both;
+}
+.text_center {
+    text-align: center;
+    vertical-align: middle;
+    line-height: var(--square_s);
+}
+#plane {
+    float: left;
+    width: var(--total_w);
+    height: var(--total_w);
+}
+#spacer {
+    float: left;
+    min-width: var(--square_s);
+}
+#scoreboard {
+    float: left;
+    width: var(--total_w);
+    height: var(--total_w);
+}
