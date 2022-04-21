@@ -76,7 +76,7 @@ function winner_checker() {
         }
     });
 
-    if (move_number == 9) {
+    if ((!winner_lock) && (move_number == 9)) {
         document.getElementById("announcer").innerHTML = "<h3>Draw</h3><button style=\"float:right;\" onclick=\"setup()\">Reset</button></h3>";
         winner_lock = true;
     }
