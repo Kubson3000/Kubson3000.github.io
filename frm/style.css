@@ -1,1 +1,6 @@
-ECHO jest wˆ¥czone.
+body {
+    background-color: gray;
+}
+fieldset {
+    background-color: lightgray;
+}

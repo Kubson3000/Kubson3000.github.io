@@ -1,33 +1,323 @@
+<!DOCTYPE html>
 <html>
-<head>
- <title>Formulage</title>
- <script src='script.js'></script>
- <stylesheet scr='stye.css'/>
-</head>
-<body>
- <div id="login">
-  <form action="">
-   <fieldset>
-    <div style="float: left;">
-     <label>Username</label> <br />
-     <label>Pa$$w0rd</label>
-    </div>
-    <div style="width: 10px;float: left;"><br /></div>
-    <div style="float: left;">
-     <input id="username" type="text" /> <br />
-     <input id="password" type="password" />
-    </div>
-    <div style="clear: both;">
-     <button type="submit()" style="float: left;">Submit</button>
-     <button onclick="cleaner()" style="float: left">Clear</button>
-    </div>
-   </fieldset>
-  </form>
-  <form>
-   <fieldset>
-    
-   </fieldset>
-  </form>
- </div>
+    <head>
+        <title>Formulage</title>
+        <script href='script.js'></script>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <form action="odbior_danych.html">
+            <fieldset>
+                <table>
+                    <tr>
+                        <th>
+                            Login
+                        </th>
+                        <th>
+                            <input id="username" type="text" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Haslo
+                        </th>
+                        <th>
+                            <input id="password" type="password" />
+                        </th>
+                    </tr>
+                </table>
+                <div style="clear: both;">
+                    <button type="submit" style="float: left;">Wyslij</button>
+                    <button type="reset" style="float: left">Wyczysc</button>
+                </div>
+            </fieldset>
+        </form> <!-- 1. Login -->
+        <form action="odbior_danych.html">
+            <fieldset>
+                <table>
+                    <tr>
+                        <th>
+                            Imie
+                        </th>
+                        <th>
+                            <input id="name" type="text" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Nazwisko
+                        </th>
+                        <th>
+                            <input id="surname" type="text" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Wojewodztwo
+                        </th>
+                        <th>
+                            <select name="voivodeship" id="voivodeship">
+                                <option value="0" selected disabled hidden>Wybierz</option>
+                                <option value="1">Dolnosliaskie</option>
+                                <option value="2">Kujawsko-pomorskie</option>
+                                <option value="3">Lubelskie</option>
+                                <option value="4">Lubuskie</option>
+                                <option value="5">Lodzkie</option>
+                                <option value="6">Malopolskie</option>
+                                <option value="7">Mazowieckie</option>
+                                <option value="8">Opolskie</option>
+                                <option value="9">Podkarpackie</option>
+                                <option value="10">Podlaskie</option>
+                                <option value="11">Pomorskie</option>
+                                <option value="12">Sliaskie</option>
+                                <option value="13">Swietokrzyskie</option>
+                                <option value="14">Warminsko-mazurskie</option>
+                                <option value="15">Wielkopolskie</option>
+                                <option value="16">Zachodniopomorskie</option>
+                            </select> <!-- >:( -->
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Miasto
+                        </th>
+                        <th>
+                            <input id="city" type="text" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Kod-pocztowy
+                        </th>
+                        <th>
+                            <input id="code" pattern="[0-9]{2}-[0-9]{3}" type="text" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Ulica
+                        </th>
+                        <th>
+                            <input id="street" type="text" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            E-mail
+                        </th>
+                        <th>
+                            <input id="email" type="email" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Zdjecie
+                        </th>
+                        <th>
+                            <input id="picture" type="file" />
+                        </th>
+                    </tr>
+                </table>
+                <div style="clear: both;">
+                    <button type="submit" style="float: left;">Wyslij</button>
+                    <button type="reset" style="float: left">Wyczysc</button>
+                </div>
+            </fieldset>
+        </form> <!-- 2. Register -->
+        <form action="odbior_danych.html">
+            <fieldset>
+                <table>
+                    <tr>
+                        <th>
+                            Marka
+                        </th>
+                        <th>
+                            <select id="brand">
+                                <option value="0">Kia</option>
+                                <option value="1">Volvo</option>
+                                <option value="2">BMW</option>
+                                <option value="3">DS</option>
+                                <option value="4">Tesla</option>
+                            </select>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Plec
+                        </th>
+                        <th>
+                            <input type="radio" id="female" name="sex" value="kobieta" />
+                            <label for="female">Kobieta</label><br />
+                            <input type="radio" id="male" name="sex" value="meszczyzna" />
+                            <label for="male">Meszczyzna</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Zainteresowania
+                        </th>
+                        <th>
+                            <input type="checkbox" id="interest0" value="sport" />
+                            <label for="interest0">Sport</label><br />
+                            <input type="checkbox" id="interest1" value="kultura" />
+                            <label for="interest1">Kultura</label><br />
+                            <input type="checkbox" id="interest2" value="film" />
+                            <label for="interest2">Film</label><br />
+                            <input type="checkbox" id="interest3" value="muzyka" />
+                            <label for="interest3">Muzyka</label><br />
+                            <input type="checkbox" id="interest4" value="gry" />
+                            <label for="interest4">Gry</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Uwagi
+                        </th>
+                        <th>
+                            <textarea cols="60" rows="10"></textarea>
+                        </th>
+                    </tr>
+                </table>
+                <input type="checkbox" id="agree0" value="pdo" checked disabled />
+                <label for="agree0">Zgoda na przetwarzanie danych osobowych</label><br />
+                <input type="checkbox" id="agree1" value="omp" />
+                <label for="agree1">Zgoda na otrzymywanie materialow promocyjnych</label>
+                <div style="clear: both;">
+                    <button type="submit" style="float: left;">Wyslij</button>
+                    <button type="reset" style="float: left">Wyczysc</button>
+                </div>
+            </fieldset> 
+        </form> <!-- 3. Form -->
+        <form action="odbior_danych.html">
+            <fieldset>
+                <table>
+                    <tr>
+                        <th>
+                            Nazwa filmu
+                        </th>
+                        <th>
+                            <input id="movie_name" type="text" maxlength="255" />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Ocena
+                        </th>
+                        <th>
+                            <table>
+                                <tr>
+                                    <th>0</th>
+                                    <th>1</th>
+                                    <th>2</th>
+                                    <th>3</th>
+                                    <th>4</th>
+                                    <th>5</th>
+                                    <th>6</th>
+                                    <th>7</th>
+                                    <th>8</th>
+                                    <th>9</th>
+                                    <th>10</th>
+                                </tr>
+                                <tr>
+                                    <th><input type="radio" id="r0" name="rating" value="0" /></th>
+                                    <th><input type="radio" id="r1" name="rating" value="1" /></th>
+                                    <th><input type="radio" id="r2" name="rating" value="2" /></th>
+                                    <th><input type="radio" id="r3" name="rating" value="3" /></th>
+                                    <th><input type="radio" id="r4" name="rating" value="4" /></th>
+                                    <th><input type="radio" id="r5" name="rating" value="5" /></th>
+                                    <th><input type="radio" id="r6" name="rating" value="6" /></th>
+                                    <th><input type="radio" id="r7" name="rating" value="7" /></th>
+                                    <th><input type="radio" id="r8" name="rating" value="8" /></th>
+                                    <th><input type="radio" id="r9" name="rating" value="9" /></th>
+                                    <th><input type="radio" id="r10" name="rating" value="10" /></th>
+                                </tr>
+                            </table>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Opis
+                        </th>
+                        <th>
+                            <textarea></textarea>
+                        </th>
+                    </tr>
+                </table>
+                <input id="hide" type="hidden" value="scislie tajna wiadomosc, shhhh!" />
+                <div style="clear: both;">
+                    <button type="submit" style="float: left;">Wyslij</button>
+                    <button type="reset" style="float: left">Wyczysc</button>
+                </div>
+            </fieldset>
+        </form> <!-- 4. Rating -->
+        <form action="odbior_danych.html">
+            <fieldset>
+                <table>
+                    <tr>
+                        <th>
+                            Kolory?
+                        </th>
+                        <th>
+                            <input id="red" type="checkbox" value="red" checked />
+                            <label for="red" style="color: red;">Czerwony</label><br />
+                            <input id="yellow" type="checkbox" value="yellow" />
+                            <label for="yellow" style="color: yellow;">Zolty</label><br />
+                            <input id="green" type="checkbox" value="green" />
+                            <label for="green" style="color: green;">Zielony</label><br />
+                            <input id="blue" type="checkbox" value="blue" />
+                            <label for="blue" style="color: blue;">Niebieski</label><br />
+                            <input id="purple" type="checkbox" value="purple" checked />
+                            <label for="purple" style="color: purple;">Fioletowy</label>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Tel
+                        </th>
+                        <th>
+                            <input id="tel_number" type="tel" value="+48 " />
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Wojewodztwo
+                        </th>
+                        <th>
+                            <select name="voivodeship" id="voivodeship">
+                                <option value="0" disabled hidden>Wybierz</option>
+                                <option value="1">Dolnosliaskie</option>
+                                <option value="2">Kujawsko-pomorskie</option>
+                                <option value="3">Lubelskie</option>
+                                <option value="4">Lubuskie</option>
+                                <option value="5">Lodzkie</option>
+                                <option value="6">Malopolskie</option>
+                                <option value="7">Mazowieckie</option>
+                                <option value="8">Opolskie</option>
+                                <option value="9">Podkarpackie</option>
+                                <option value="10">Podlaskie</option>
+                                <option value="11">Pomorskie</option>
+                                <option value="12" selected>Sliaskie</option>
+                                <option value="13">Swietokrzyskie</option>
+                                <option value="14">Warminsko-mazurskie</option>
+                                <option value="15">Wielkopolskie</option>
+                                <option value="16">Zachodniopomorskie</option>
+                            </select> <!-- >:( #2 -->
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            Komentarz
+                        </th>
+                        <th>
+                            <textarea>Tutaj wpisz komentarz</textarea>
+                        </th>
+                    </tr>
+                </table>
+                <div style="clear: both;">
+                    <button type="submit" style="float: left;">Wyslij</button>
+                    <button type="reset" style="float: left">Wyczysc</button>
+                </div>
+            </fieldset>
+        </form> <!-- 5. Mix -->
 </body>
 </html>
