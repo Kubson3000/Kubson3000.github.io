@@ -1,130 +1,129 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Formulage</title>
-        <script href='script.js'></script>
-        <link rel="stylesheet" href="style.css" />
-    </head>
+<head>
+    <title>Formulage</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
     <body>
-        <form action="odbior_danych.html">
+        <div class="topnav">
+            <a id="t_one" onclick="form_switcher('one', 't_one')">Login</a>
+            <a id="t_two" onclick="form_switcher('two', 't_two')">Register</a>
+            <a id="t_three" onclick="form_switcher('three', 't_three')">Form</a>
+            <a id="t_four" onclick="form_switcher('four', 't_four')">Rating</a>
+            <a id="t_five" onclick="form_switcher('five', 't_five')">Mix</a>
+        </div> <!-- 0. Nav_bar -->
+        <form id="one" name="login" action="odbior_danych.html">
             <fieldset>
-                <table>
-                    <tr>
-                        <th>
-                            Login
-                        </th>
-                        <th>
-                            <input id="username" type="text" />
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Haslo
-                        </th>
-                        <th>
-                            <input id="password" type="password" />
-                        </th>
-                    </tr>
-                </table>
-                <div style="clear: both;">
-                    <button type="submit" style="float: left;">Wyslij</button>
-                    <button type="reset" style="float: left">Wyczysc</button>
+                <div id="login_main">
+                    <h1>LOGIN</h1>
+                    <div class="input_div">
+                        <p>Login</p>
+                        <div class="input">
+                            <span class="material-symbols-outlined">
+                                account_circle
+                            </span>
+                            <input id="username" type="text" class="login_input" placeholder="Please enter you login" />
+                        </div>
+                    </div>
+                    <div class="input_div">
+                        <p>Password</p>
+                        <div class="input">
+                            <span class="material-symbols-outlined">
+                                lock
+                            </span>
+                            <input id="password" type="password" class="login_input" placeholder="Please enter you password" />
+                        </div>
+                    </div>
+                    <br />
+                    <button class="btn" type="submit">Wyslij</button>
+                    <br /><br />
+                    <button class="btn" type="reset">Wyczysc</button>
                 </div>
             </fieldset>
         </form> <!-- 1. Login -->
-        <form action="odbior_danych.html">
+        <form id="two" name="register" action="odbior_danych.html">
             <fieldset>
-                <table>
-                    <tr>
-                        <th>
-                            Imie
-                        </th>
-                        <th>
-                            <input id="name" type="text" />
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Nazwisko
-                        </th>
-                        <th>
-                            <input id="surname" type="text" />
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Wojewodztwo
-                        </th>
-                        <th>
-                            <select name="voivodeship" id="voivodeship">
-                                <option value="0" selected disabled hidden>Wybierz</option>
-                                <option value="1">Dolnosliaskie</option>
-                                <option value="2">Kujawsko-pomorskie</option>
-                                <option value="3">Lubelskie</option>
-                                <option value="4">Lubuskie</option>
-                                <option value="5">Lodzkie</option>
-                                <option value="6">Malopolskie</option>
-                                <option value="7">Mazowieckie</option>
-                                <option value="8">Opolskie</option>
-                                <option value="9">Podkarpackie</option>
-                                <option value="10">Podlaskie</option>
-                                <option value="11">Pomorskie</option>
-                                <option value="12">Sliaskie</option>
-                                <option value="13">Swietokrzyskie</option>
-                                <option value="14">Warminsko-mazurskie</option>
-                                <option value="15">Wielkopolskie</option>
-                                <option value="16">Zachodniopomorskie</option>
-                            </select> <!-- >:( -->
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Miasto
-                        </th>
-                        <th>
-                            <input id="city" type="text" />
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Kod-pocztowy
-                        </th>
-                        <th>
-                            <input id="code" pattern="[0-9]{2}-[0-9]{3}" type="text" />
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Ulica
-                        </th>
-                        <th>
-                            <input id="street" type="text" />
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            E-mail
-                        </th>
-                        <th>
-                            <input id="email" type="email" />
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Zdjecie
-                        </th>
-                        <th>
-                            <input id="picture" type="file" />
-                        </th>
-                    </tr>
-                </table>
-                <div style="clear: both;">
-                    <button type="submit" style="float: left;">Wyslij</button>
-                    <button type="reset" style="float: left">Wyczysc</button>
+                <div id="login_main">
+                    <h1>REGISTER</h1>
+                    <div id="div_imie" class="border">
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+                        <input type="text" id="firstname" class="login_input" placeholder="Imie" />
+                    </div>
+                    <div id="div_nazwisko" class="border">
+                        <span class="material-symbols-outlined">
+                            group
+                        </span>
+                        <input type="text" id="secondname" class="login_input" placeholder="Nazwisko" />
+                    </div>
                 </div>
+                <br />
+                <div id="voiv_main" class="border">
+                    <span class="material-symbols-outlined">
+                        location_city
+                    </span>
+                    <select name="voivodeship" id="select_voivodeship">
+                        <option value="0" selected disabled hidden>Wybierz</option>
+                        <option value="1">Dolnosliaskie</option>
+                        <option value="2">Kujawsko-pomorskie</option>
+                        <option value="3">Lubelskie</option>
+                        <option value="4">Lubuskie</option>
+                        <option value="5">Lodzkie</option>
+                        <option value="6">Malopolskie</option>
+                        <option value="7">Mazowieckie</option>
+                        <option value="8">Opolskie</option>
+                        <option value="9">Podkarpackie</option>
+                        <option value="10">Podlaskie</option>
+                        <option value="11">Pomorskie</option>
+                        <option value="12">Sliaskie</option>
+                        <option value="13">Swietokrzyskie</option>
+                        <option value="14">Warminsko-mazurskie</option>
+                        <option value="15">Wielkopolskie</option>
+                        <option value="16">Zachodniopomorskie</option>
+                    </select> <!-- >:( -->
+                </div>
+                <div id="city_postal_div">
+                    <div id="city_div" class="border">
+                        <span class="material-symbols-outlined">
+                            apartment
+                        </span>
+                        <input type="text" id="city_input" class="login_input" placeholder="Miasto" />
+                    </div>
+                    <div id="postal_code_div" class="border">
+                        <span class="material-symbols-outlined">
+                            local_post_office
+                        </span>
+                        <input type="text" id="postal_code_input" class="login_input" pattern="[0-9]{2}-[0-9]{3}" placeholder="Kod pocztowy" />
+                    </div>
+                </div>
+                <div id="street_div" class="border">
+                    <span class="material-symbols-outlined">
+                        signpost
+                    </span>
+                    <input type="text" id="street_input" class="login_input" placeholder="Ulica" />
+                </div>
+                <div id="email_div" class="border">
+                    <span class="material-symbols-outlined">
+                        alternate_email
+                    </span>
+                    <input type="email" id="email_input" class="login_input" placeholder="E-mail" />
+                </div>
+                <div id="picture_div" class="border" >
+                    <span class="material-symbols-outlined">
+                        image
+                    </span>
+                    <input type="file" id="picture_input" class="login_input" />
+                </div>
+                <br />
+                <button class="register_button" type="submit">Wyslij</button>
+                <br /><br />
+                <button class="register_button" type="reset">Wyczysc</button>
             </fieldset>
         </form> <!-- 2. Register -->
-        <form action="odbior_danych.html">
+        <form id="three" name="form" action="odbior_danych.html">
             <fieldset>
                 <table>
                     <tr>
@@ -183,12 +182,12 @@
                 <input type="checkbox" id="agree1" value="omp" />
                 <label for="agree1">Zgoda na otrzymywanie materialow promocyjnych</label>
                 <div style="clear: both;">
-                    <button type="submit" style="float: left;">Wyslij</button>
+                    <button method="post" style="float: left;">Wyslij</button>
                     <button type="reset" style="float: left">Wyczysc</button>
                 </div>
-            </fieldset> 
+            </fieldset>
         </form> <!-- 3. Form -->
-        <form action="odbior_danych.html">
+        <form id="four" name="rating" action="odbior_danych.html">
             <fieldset>
                 <table>
                     <tr>
@@ -245,12 +244,12 @@
                 </table>
                 <input id="hide" type="hidden" value="scislie tajna wiadomosc, shhhh!" />
                 <div style="clear: both;">
-                    <button type="submit" style="float: left;">Wyslij</button>
+                    <button method="post" style="float: left;">Wyslij</button>
                     <button type="reset" style="float: left">Wyczysc</button>
                 </div>
             </fieldset>
         </form> <!-- 4. Rating -->
-        <form action="odbior_danych.html">
+        <form id="five" name="mix" action="odbior_danych.html">
             <fieldset>
                 <table>
                     <tr>
@@ -314,10 +313,10 @@
                     </tr>
                 </table>
                 <div style="clear: both;">
-                    <button type="submit" style="float: left;">Wyslij</button>
+                    <button method="post" style="float: left;">Wyslij</button>
                     <button type="reset" style="float: left">Wyczysc</button>
                 </div>
             </fieldset>
         </form> <!-- 5. Mix -->
-</body>
+    </body>
 </html>
