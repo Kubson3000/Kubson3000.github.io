@@ -229,70 +229,75 @@
         </form> <!-- 4. Rating -->
         <form id="five" name="mix" action="odbior_danych.html">
             <fieldset>
-                <table>
+                <h1>MIX</h1>
+                <h4>Kolory ?</h4>
+                <table class="max_width">
                     <tr>
                         <th>
-                            Kolory?
+                            <input id="red" type="checkbox" value="red" checked />
+                            <label for="red" style="color: red;">Czerwony</label>
                         </th>
                         <th>
-                            <input id="red" type="checkbox" value="red" checked />
-                            <label for="red" style="color: red;">Czerwony</label><br />
                             <input id="yellow" type="checkbox" value="yellow" />
-                            <label for="yellow" style="color: yellow;">Zolty</label><br />
+                            <label for="yellow" style="color: yellow;">Zolty</label>
+                        </th>
+                        <th>
                             <input id="green" type="checkbox" value="green" />
-                            <label for="green" style="color: green;">Zielony</label><br />
+                            <label for="green" style="color: green;">Zielony</label>
+                        </th>
+                        <th>
                             <input id="blue" type="checkbox" value="blue" />
-                            <label for="blue" style="color: blue;">Niebieski</label><br />
+                            <label for="blue" style="color: blue;">Niebieski</label>
+                        </th>
+                        <th>
                             <input id="purple" type="checkbox" value="purple" checked />
                             <label for="purple" style="color: purple;">Fioletowy</label>
                         </th>
                     </tr>
-                    <tr>
-                        <th>
-                            Tel
-                        </th>
-                        <th>
-                            <input id="tel_number" type="tel" value="+48 " />
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Wojewodztwo
-                        </th>
-                        <th>
-                            <select name="voivodeship" id="voivodeship">
-                                <option value="0" disabled hidden>Wybierz</option>
-                                <option value="1">Dolnosliaskie</option>
-                                <option value="2">Kujawsko-pomorskie</option>
-                                <option value="3">Lubelskie</option>
-                                <option value="4">Lubuskie</option>
-                                <option value="5">Lodzkie</option>
-                                <option value="6">Malopolskie</option>
-                                <option value="7">Mazowieckie</option>
-                                <option value="8">Opolskie</option>
-                                <option value="9">Podkarpackie</option>
-                                <option value="10">Podlaskie</option>
-                                <option value="11">Pomorskie</option>
-                                <option value="12" selected>Sliaskie</option>
-                                <option value="13">Swietokrzyskie</option>
-                                <option value="14">Warminsko-mazurskie</option>
-                                <option value="15">Wielkopolskie</option>
-                                <option value="16">Zachodniopomorskie</option>
-                            </select> <!-- >:( #2 -->
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Komentarz
-                        </th>
-                        <th>
-                            <textarea>Tutaj wpisz komentarz</textarea>
-                        </th>
-                    </tr>
                 </table>
-                <div style="clear: both;">
-                    <button method="post" style="float: left;">Wyslij</button>
-                    <button type="reset" style="float: left">Wyczysc</button>
+                <div class="seperator_div"></div>
+                <div class="login_div">
+                    <h4>Tel</h4>
+                    <div class="input_div">
+                        <span class="material-symbols-outlined">
+                            call
+                        </span>
+                        <input type="tel" id="tel_input" class="login_input" value="+48 " />
+                    </div>
+                </div>
+                <h4 class="top_spacer">Wojewodztwo</h4>
+                <div id="voiv_main" class="border">
+                    <span class="material-symbols-outlined">
+                        location_city
+                    </span>
+                    <select name="voivodeship" id="select_voivodeship">
+                        <option value="0" disabled hidden>Wybierz</option>
+                        <option value="1">Dolnosliaskie</option>
+                        <option value="2">Kujawsko-pomorskie</option>
+                        <option value="3">Lubelskie</option>
+                        <option value="4">Lubuskie</option>
+                        <option value="5">Lodzkie</option>
+                        <option value="6">Malopolskie</option>
+                        <option value="7">Mazowieckie</option>
+                        <option value="8">Opolskie</option>
+                        <option value="9">Podkarpackie</option>
+                        <option value="10">Podlaskie</option>
+                        <option value="11">Pomorskie</option>
+                        <option value="12" selected >Sliaskie</option>
+                        <option value="13">Swietokrzyskie</option>
+                        <option value="14">Warminsko-mazurskie</option>
+                        <option value="15">Wielkopolskie</option>
+                        <option value="16">Zachodniopomorskie</option>
+                    </select> <!-- >:( -->
+                </div>
+                <div class="seperator_div"></div>
+                <div id="comment_div" class="input_div">
+                    <h4>Uwagi</h4>
+                    <textarea id="comment_input" class="top_spacer max_width" placeholder=""></textarea>
+                </div>
+                <div id="buton_div" class="top_spacer">
+                    <button class="form_btn" type="submit">Wyslij</button>
+                    <button class="form_btn" type="reset">Wyczysc</button>
                 </div>
             </fieldset>
         </form> <!-- 5. Mix -->

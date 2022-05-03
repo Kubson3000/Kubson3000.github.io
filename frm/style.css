@@ -114,6 +114,14 @@ h4 {
 .max_width {
     width: 100%;
 }
+.seperator_div {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    min-height: 3px;
+    margin-top: 7px;
+    margin-bottom: 17px;
+}
 #one {
     width: 30%;
 }
