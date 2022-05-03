@@ -4,8 +4,8 @@ window.onload = function() {
     for (const element of form_list) {
         document.getElementById(element).style.display = "none";
     }
-    document.getElementById("two").style.display = "block";
-    document.getElementById("t_two").classList.add("active");
+    document.getElementById("three").style.display = "block";
+    document.getElementById("t_three").classList.add("active");
 }
 function form_switcher(target_form, bar_id) {
     for (const element of form_list) {

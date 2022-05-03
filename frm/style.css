@@ -15,6 +15,12 @@ p {
     text-align: left;
     margin-bottom: 0;
 }
+h1 {
+    text-align: center;
+}
+h4 {
+    margin: 0;
+}
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -61,6 +67,22 @@ p {
     background-color: transparent;
     border-radius: 25px;
 }
+.btn:hover {
+    cursor: pointer;
+}
+.form_btn {
+    margin-top: 5px;
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+    float: left;
+    height: 35px;
+    background-color: transparent;
+    border-radius: 25px;
+}
+.form_btn:hover {
+    cursor: pointer;
+}
 .register_button {
     width: 89%;
     height: 35px;
@@ -68,7 +90,7 @@ p {
     background-color: transparent;
     border-radius: 25px;
 }
-.btn:hover {
+.register_button:hover {
     cursor: pointer;
 }
 .border {
@@ -76,11 +98,24 @@ p {
     border-color: black;
     border-width: 2px;
 }
+.form_panel {
+    overflow: hidden;
+    border-style: solid;
+    border-color: black;
+    background-color: azure;
+    margin-top: 5px;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 5px;
+}
 #one {
     width: 30%;
 }
 #two {
     width: 35%;
+}
+#three {
+    width: 40%;
 }
 #div_imie {
     width: 45%;

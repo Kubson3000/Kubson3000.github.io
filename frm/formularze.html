@@ -115,7 +115,7 @@
                     <span class="material-symbols-outlined">
                         image
                     </span>
-                    <input type="file" id="picture_input" class="login_input" />
+                    <input type="file" id="picture_input" class="login_input" accept=".gif, .png, .jpg, .jpeg, .jfif" />
                 </div>
                 <br />
                 <button class="register_button" type="submit">Wyslij</button>
@@ -125,65 +125,54 @@
         </form> <!-- 2. Register -->
         <form id="three" name="form" action="odbior_danych.html">
             <fieldset>
-                <table>
-                    <tr>
-                        <th>
-                            Marka
-                        </th>
-                        <th>
-                            <select id="brand">
-                                <option value="0">Kia</option>
-                                <option value="1">Volvo</option>
-                                <option value="2">BMW</option>
-                                <option value="3">DS</option>
-                                <option value="4">Tesla</option>
-                            </select>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Plec
-                        </th>
-                        <th>
-                            <input type="radio" id="female" name="sex" value="kobieta" />
-                            <label for="female">Kobieta</label><br />
-                            <input type="radio" id="male" name="sex" value="meszczyzna" />
-                            <label for="male">Meszczyzna</label>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Zainteresowania
-                        </th>
-                        <th>
-                            <input type="checkbox" id="interest0" value="sport" />
-                            <label for="interest0">Sport</label><br />
-                            <input type="checkbox" id="interest1" value="kultura" />
-                            <label for="interest1">Kultura</label><br />
-                            <input type="checkbox" id="interest2" value="film" />
-                            <label for="interest2">Film</label><br />
-                            <input type="checkbox" id="interest3" value="muzyka" />
-                            <label for="interest3">Muzyka</label><br />
-                            <input type="checkbox" id="interest4" value="gry" />
-                            <label for="interest4">Gry</label>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Uwagi
-                        </th>
-                        <th>
-                            <textarea cols="60" rows="10"></textarea>
-                        </th>
-                    </tr>
-                </table>
-                <input type="checkbox" id="agree0" value="pdo" checked disabled />
-                <label for="agree0">Zgoda na przetwarzanie danych osobowych</label><br />
-                <input type="checkbox" id="agree1" value="omp" />
-                <label for="agree1">Zgoda na otrzymywanie materialow promocyjnych</label>
-                <div style="clear: both;">
-                    <button method="post" style="float: left;">Wyslij</button>
-                    <button type="reset" style="float: left">Wyczysc</button>
+                <h1>FORM</h1>
+                <div id="car_div" class="form_panel">
+                        <h4>Zaznacz dowolna ilosc marek samochodowych, przytrzymaj "Ctrl" aby zaznaczyc wiele marek.</h3><br />
+                        <select id="car_select" size="5" multiple>
+                            <option value="0">Kia</option>
+                            <option value="1">Volvo</option>
+                            <option value="2">BMW</option>
+                            <option value="3">DS</option>
+                            <option value="4">Tesla</option>
+                            <option value="5">Subaru</option>
+                            <option value="6">Audi</option>
+                            <option value="6">Ford</option>
+                            <option value="7">Fiat</option>
+                        </select>
+                </div>
+                <div id="sex_div" class="form_panel">
+                    <h4>Zaznacz plec</h4><br />
+                    <input type="radio" id="female" name="sex" value="kobieta" />
+                    <label for="female">Kobieta</label>
+                    <input type="radio" id="male" name="sex" value="meszczyzna" />
+                    <label for="male">Meszczyzna</label>    
+                </div>
+                <div id="interest_div" class="form_panel">
+                    <h4>Zaznacz swoje zainteresowania</h4><br />
+                    <input type="checkbox" id="interest0" value="sport" />
+                    <label for="interest0">Sport</label><br />
+                    <input type="checkbox" id="interest1" value="kultura" />
+                    <label for="interest1">Kultura</label><br />
+                    <input type="checkbox" id="interest2" value="film" />
+                    <label for="interest2">Film</label><br />
+                    <input type="checkbox" id="interest3" value="muzyka" />
+                    <label for="interest3">Muzyka</label><br />
+                    <input type="checkbox" id="interest4" value="gry" />
+                    <label for="interest4">Gry</label>
+                </div>
+                <div id="comment_div" class="form_panel">
+                    <h4>Uwagi</h4><br />
+                    <textarea cols="60" rows="10"></textarea>
+                </div>
+                <div id="agreements_div" class="form_panel">
+                    <input type="checkbox" id="agree0" value="pdo" />
+                    <label for="agree0">Zgoda na przetwarzanie danych osobowych</label><br />
+                    <input type="checkbox" id="agree1" value="omp" checked disabled />
+                    <label for="agree1">Zgoda na otrzymywanie materialow promocyjnych</label>
+                </div>
+                <div id="buton_div" class="">
+                    <button class="form_btn" type="submit">Wyslij</button>
+                    <button class="form_btn" type="reset">Wyczysc</button>
                 </div>
             </fieldset>
         </form> <!-- 3. Form -->
