@@ -178,63 +178,52 @@
         </form> <!-- 3. Form -->
         <form id="four" name="rating" action="odbior_danych.html">
             <fieldset>
-                <table>
-                    <tr>
-                        <th>
-                            Nazwa filmu
-                        </th>
-                        <th>
-                            <input id="movie_name" type="text" maxlength="255" />
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Ocena
-                        </th>
-                        <th>
-                            <table>
-                                <tr>
-                                    <th>0</th>
-                                    <th>1</th>
-                                    <th>2</th>
-                                    <th>3</th>
-                                    <th>4</th>
-                                    <th>5</th>
-                                    <th>6</th>
-                                    <th>7</th>
-                                    <th>8</th>
-                                    <th>9</th>
-                                    <th>10</th>
-                                </tr>
-                                <tr>
-                                    <th><input type="radio" id="r0" name="rating" value="0" /></th>
-                                    <th><input type="radio" id="r1" name="rating" value="1" /></th>
-                                    <th><input type="radio" id="r2" name="rating" value="2" /></th>
-                                    <th><input type="radio" id="r3" name="rating" value="3" /></th>
-                                    <th><input type="radio" id="r4" name="rating" value="4" /></th>
-                                    <th><input type="radio" id="r5" name="rating" value="5" /></th>
-                                    <th><input type="radio" id="r6" name="rating" value="6" /></th>
-                                    <th><input type="radio" id="r7" name="rating" value="7" /></th>
-                                    <th><input type="radio" id="r8" name="rating" value="8" /></th>
-                                    <th><input type="radio" id="r9" name="rating" value="9" /></th>
-                                    <th><input type="radio" id="r10" name="rating" value="10" /></th>
-                                </tr>
-                            </table>
-                        </th>
-                    </tr>
-                    <tr>
-                        <th>
-                            Opis
-                        </th>
-                        <th>
-                            <textarea></textarea>
-                        </th>
-                    </tr>
-                </table>
+                <h1>RATING</h1>
+                <div id="film_name_div" class="input_div">
+                    <h4>1. Nazwa filmu:</h4>
+                    <input type="text" id="film_name_input" class="login_input top_spacer" placeholder="Wpisz nazwe filmu" maxlength="255" />
+                </div>
+                <br />
+                <div id="film_rating_div" class="input_div">
+                    <h4>2. Wybierz ocene dla filmu</h4>
+                    <table class="top_spacer max_width">
+                        <tr>
+                            <th>0</th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                            <th>10</th>
+                        </tr>
+                        <tr>
+                            <th><input type="radio" id="r0" name="rating" value="0" /></th>
+                            <th><input type="radio" id="r1" name="rating" value="1" /></th>
+                            <th><input type="radio" id="r2" name="rating" value="2" /></th>
+                            <th><input type="radio" id="r3" name="rating" value="3" /></th>
+                            <th><input type="radio" id="r4" name="rating" value="4" /></th>
+                            <th><input type="radio" id="r5" name="rating" value="5" checked /></th>
+                            <th><input type="radio" id="r6" name="rating" value="6" /></th>
+                            <th><input type="radio" id="r7" name="rating" value="7" /></th>
+                            <th><input type="radio" id="r8" name="rating" value="8" /></th>
+                            <th><input type="radio" id="r9" name="rating" value="9" /></th>
+                            <th><input type="radio" id="r10" name="rating" value="10" /></th>
+                        </tr>
+                    </table>
+                </div>
+                <br />
+                <div id="film_comment_div" class="input_div">
+                    <h4>3. Opisz obejrzany film</h4>
+                    <textarea id="film_comment_input" class="top_spacer max_width" placeholder="Opis filmu"></textarea>
+                </div>
                 <input id="hide" type="hidden" value="scislie tajna wiadomosc, shhhh!" />
-                <div style="clear: both;">
-                    <button method="post" style="float: left;">Wyslij</button>
-                    <button type="reset" style="float: left">Wyczysc</button>
+                <div id="buton_div" class="top_spacer">
+                    <button class="form_btn" type="submit">Wyslij</button>
+                    <button class="form_btn" type="reset">Wyczysc</button>
                 </div>
             </fieldset>
         </form> <!-- 4. Rating -->
