@@ -1,0 +1,41 @@
+:root {
+    --square_size: 25px;
+    --spacer_size: calc(var(--square_size)/10.0);
+}
+body {
+    background-color: grey;
+}
+#main {
+    width: 50%;
+    margin: auto;
+}
+#input_div {
+    background-color: lightblue;
+}
+#game_area {
+    background-color: darkgrey;
+    min-width: 100%;
+    min-height: 400px;
+}
+.spacer {
+    clear: both;
+}
+.tile {
+    margin: var(--spacer_size);
+    text-align: center;
+}
+.tile:hover {
+    cursor: pointer;
+}
+.unclicked {
+    width: var(--square_size);
+    height: var(--square_size);
+    float: left;
+    background-color: grey;
+}
+.clicked {
+    width: var(--square_size);
+    height: var(--square_size);
+    float: left;
+    background-color: aliceblue;
+}

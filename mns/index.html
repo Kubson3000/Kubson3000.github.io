@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MineSweeper</title>
+        <link rel="stylesheet" href="./StyleSheet.css" />
+        <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+        <script src="./JavaScript.js"></script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="setup_area">
+                <div id="input_div">
+                    <table>
+                        <tr>
+                            <th>
+                                Height:
+                            </th>
+                            <th>
+                                <input type="number" id="height_input" onchange="update_values()" min="9" value="9" />
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                Width:
+                            </th>
+                            <th>
+                                <input type="number" id="width_input" onchange="update_values()" min="9" value="9" />
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                Bombs:   
+                            </th>
+                            <th>
+                                <input type="number" id="bombs_input" onchange="update_values()" value="10" />
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>
+                                <button id="start_button" onclick="start()">Start</button>
+                            </th>
+                            <th>
+                                <button id="restart_button" onclick="restart()" >Restart</button>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div id="game_area">
+    
+            </div>
+        </div>
+    </body>
+</html>

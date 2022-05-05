@@ -14,7 +14,7 @@
             <a id="t_four" onclick="form_switcher('four', 't_four')">Rating</a>
             <a id="t_five" onclick="form_switcher('five', 't_five')">Mix</a>
         </div> <!-- 0. Nav_bar -->
-        <form id="one" name="login" action="odbior_danych.html">
+        <form id="one" name="login" method="post" action="odbior_danych.html">
             <fieldset>
                 <div id="login_main">
                     <h1>LOGIN</h1>
@@ -43,7 +43,7 @@
                 </div>
             </fieldset>
         </form> <!-- 1. Login -->
-        <form id="two" name="register" action="odbior_danych.html">
+        <form id="two" name="register" method="post" action="odbior_danych.html">
             <fieldset>
                 <div id="login_main">
                     <h1>REGISTER</h1>
@@ -115,7 +115,7 @@
                     <span class="material-symbols-outlined">
                         image
                     </span>
-                    <input type="file" id="picture_input" class="login_input" accept=".gif, .png, .jpg, .jpeg, .jfif" />
+                    <input type="file" id="picture_input" class="login_input" accept=".gif, .png, .jpg, .jpeg, .jfif, .avif, .apng, .pjp, .pjpeg, .svg, .webp, .bmp, .ico, .cur, .tif, .tiff" />
                 </div>
                 <br />
                 <button class="register_button" type="submit">Wyslij</button>
@@ -123,7 +123,7 @@
                 <button class="register_button" type="reset">Wyczysc</button>
             </fieldset>
         </form> <!-- 2. Register -->
-        <form id="three" name="form" action="odbior_danych.html">
+        <form id="three" name="form" method="post" action="odbior_danych.html">
             <fieldset>
                 <h1>FORM</h1>
                 <div id="car_div" class="form_panel">
@@ -176,7 +176,7 @@
                 </div>
             </fieldset>
         </form> <!-- 3. Form -->
-        <form id="four" name="rating" action="odbior_danych.html">
+        <form id="four" name="rating" method="post" action="odbior_danych.html">
             <fieldset>
                 <h1>RATING</h1>
                 <div id="film_name_div" class="input_div">
@@ -227,7 +227,7 @@
                 </div>
             </fieldset>
         </form> <!-- 4. Rating -->
-        <form id="five" name="mix" action="odbior_danych.html">
+        <form id="five" name="mix" method="post" action="odbior_danych.html">
             <fieldset>
                 <h1>MIX</h1>
                 <h4>Kolory ?</h4>
