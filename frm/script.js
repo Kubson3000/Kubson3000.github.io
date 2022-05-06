@@ -4,8 +4,8 @@ window.onload = function() {
     for (const element of form_list) {
         document.getElementById(element).style.display = "none";
     }
-    document.getElementById("five").style.display = "block";
-    document.getElementById("five").classList.add("active");
+    document.getElementById("one").style.display = "block";
+    document.getElementById("t_one").classList.add("active");
     rainbow();
 }
 function rainbow() {
