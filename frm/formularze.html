@@ -14,7 +14,7 @@
             <a id="t_four" onclick="form_switcher('four', 't_four')">Rating</a>
             <a id="t_five" onclick="form_switcher('five', 't_five')">Mix</a>
         </div> <!-- 0. Nav_bar -->
-        <form id="one" name="login" method="post" action="odbior_danych.html">
+        <form id="one" method="post" action="odbior_danych.html">
             <fieldset>
                 <div id="login_main">
                     <h1>LOGIN</h1>
@@ -24,7 +24,7 @@
                             <span class="material-symbols-outlined">
                                 account_circle
                             </span>
-                            <input id="username" type="text" class="login_input" placeholder="Please enter you login" />
+                            <input id="username" name="username" type="text" class="login_input" placeholder="Please enter you login" />
                         </div>
                     </div>
                     <div class="input_div">
@@ -33,7 +33,7 @@
                             <span class="material-symbols-outlined">
                                 lock
                             </span>
-                            <input id="password" type="password" class="login_input" placeholder="Please enter you password" />
+                            <input id="password" name="password" type="password" class="login_input" placeholder="Please enter you password" />
                         </div>
                     </div>
                     <br />
@@ -43,7 +43,7 @@
                 </div>
             </fieldset>
         </form> <!-- 1. Login -->
-        <form id="two" name="register" method="post" action="odbior_danych.html">
+        <form id="two" method="post" action="odbior_danych.html">
             <fieldset>
                 <div id="login_main">
                     <h1>REGISTER</h1>
@@ -51,13 +51,13 @@
                         <span class="material-symbols-outlined">
                             person
                         </span>
-                        <input type="text" id="firstname" class="login_input" placeholder="Imie" />
+                        <input type="text" name="fname" id="firstname" class="login_input" placeholder="Imie" />
                     </div>
                     <div id="div_nazwisko" class="border">
                         <span class="material-symbols-outlined">
                             group
                         </span>
-                        <input type="text" id="secondname" class="login_input" placeholder="Nazwisko" />
+                        <input type="text" name="sname" id="secondname" class="login_input" placeholder="Nazwisko" />
                     </div>
                 </div>
                 <br />
@@ -65,7 +65,7 @@
                     <span class="material-symbols-outlined">
                         location_city
                     </span>
-                    <select name="voivodeship" id="select_voivodeship">
+                    <select name="voivodeship" name="voivodeship" class="select_voivodeship" id="select_voivodeship">
                         <option value="0" selected disabled hidden>Wybierz</option>
                         <option value="1">Dolnosliaskie</option>
                         <option value="2">Kujawsko-pomorskie</option>
@@ -90,32 +90,32 @@
                         <span class="material-symbols-outlined">
                             apartment
                         </span>
-                        <input type="text" id="city_input" class="login_input" placeholder="Miasto" />
+                        <input type="text" name="city" id="city_input" class="login_input" placeholder="Miasto" />
                     </div>
                     <div id="postal_code_div" class="border">
                         <span class="material-symbols-outlined">
                             local_post_office
                         </span>
-                        <input type="text" id="postal_code_input" class="login_input" pattern="[0-9]{2}-[0-9]{3}" placeholder="Kod pocztowy" />
+                        <input type="text" name="postal_code" id="postal_code_input" class="login_input" pattern="[0-9]{2}-[0-9]{3}" placeholder="Kod pocztowy" />
                     </div>
                 </div>
                 <div id="street_div" class="border">
                     <span class="material-symbols-outlined">
                         signpost
                     </span>
-                    <input type="text" id="street_input" class="login_input" placeholder="Ulica" />
+                    <input type="text" name="street" id="street_input" class="login_input" placeholder="Ulica" />
                 </div>
                 <div id="email_div" class="border">
                     <span class="material-symbols-outlined">
                         alternate_email
                     </span>
-                    <input type="email" id="email_input" class="login_input" placeholder="E-mail" />
+                    <input type="email" name="email" id="email_input" class="login_input" placeholder="E-mail" />
                 </div>
                 <div id="picture_div" class="border" >
                     <span class="material-symbols-outlined">
                         image
                     </span>
-                    <input type="file" id="picture_input" class="login_input" accept=".gif, .png, .jpg, .jpeg, .jfif, .avif, .apng, .pjp, .pjpeg, .svg, .webp, .bmp, .ico, .cur, .tif, .tiff" />
+                    <input type="file" name="picture" id="picture_input" class="login_input" accept=".gif, .png, .jpg, .jpeg, .jfif, .avif, .apng, .pjp, .pjpeg, .svg, .webp, .bmp, .ico, .cur, .tif, .tiff" />
                 </div>
                 <br />
                 <button class="register_button" type="submit">Wyslij</button>
@@ -123,12 +123,12 @@
                 <button class="register_button" type="reset">Wyczysc</button>
             </fieldset>
         </form> <!-- 2. Register -->
-        <form id="three" name="form" method="post" action="odbior_danych.html">
+        <form id="three" method="post" action="odbior_danych.html">
             <fieldset>
                 <h1>FORM</h1>
                 <div id="car_div" class="form_panel">
                         <h4>Zaznacz dowolna ilosc marek samochodowych, przytrzymaj "Ctrl" aby zaznaczyc wiele marek.</h3><br />
-                        <select id="car_select" size="5" multiple>
+                        <select id="car_select" name="car" size="5" multiple>
                             <option value="0">Kia</option>
                             <option value="1">Volvo</option>
                             <option value="2">BMW</option>
@@ -149,25 +149,25 @@
                 </div>
                 <div id="interest_div" class="form_panel">
                     <h4>Zaznacz swoje zainteresowania</h4><br />
-                    <input type="checkbox" id="interest0" value="sport" />
+                    <input type="checkbox" id="interest0" name="interest" value="sport" />
                     <label for="interest0">Sport</label><br />
-                    <input type="checkbox" id="interest1" value="kultura" />
+                    <input type="checkbox" id="interest1" name="interest" value="kultura" />
                     <label for="interest1">Kultura</label><br />
-                    <input type="checkbox" id="interest2" value="film" />
+                    <input type="checkbox" id="interest2" name="interest" value="film" />
                     <label for="interest2">Film</label><br />
-                    <input type="checkbox" id="interest3" value="muzyka" />
+                    <input type="checkbox" id="interest3" name="interest" value="muzyka" />
                     <label for="interest3">Muzyka</label><br />
-                    <input type="checkbox" id="interest4" value="gry" />
+                    <input type="checkbox" id="interest4" name="interest" value="gry" />
                     <label for="interest4">Gry</label>
                 </div>
                 <div id="comment_div" class="form_panel">
                     <h4>Uwagi</h4><br />
-                    <textarea cols="60" rows="10"></textarea>
+                    <textarea name="comment" cols="60" rows="10"></textarea>
                 </div>
                 <div id="agreements_div" class="form_panel">
-                    <input type="checkbox" id="agree0" value="pdo" />
+                    <input type="checkbox" name="agree0" id="agree0" value="pdo" />
                     <label for="agree0">Zgoda na przetwarzanie danych osobowych</label><br />
-                    <input type="checkbox" id="agree1" value="omp" checked disabled />
+                    <input type="checkbox" name="agree1" id="agree1" value="omp" checked disabled />
                     <label for="agree1">Zgoda na otrzymywanie materialow promocyjnych</label>
                 </div>
                 <div id="buton_div" class="">
@@ -176,12 +176,12 @@
                 </div>
             </fieldset>
         </form> <!-- 3. Form -->
-        <form id="four" name="rating" method="post" action="odbior_danych.html">
+        <form id="four" method="post" action="odbior_danych.html">
             <fieldset>
                 <h1>RATING</h1>
                 <div id="film_name_div" class="input_div">
                     <h4>1. Nazwa filmu:</h4>
-                    <input type="text" id="film_name_input" class="login_input top_spacer" placeholder="Wpisz nazwe filmu" maxlength="255" />
+                    <input type="text" id="film_name_input" name="title" class="login_input top_spacer" placeholder="Wpisz nazwe filmu" maxlength="255" />
                 </div>
                 <br />
                 <div id="film_rating_div" class="input_div">
@@ -218,39 +218,39 @@
                 <br />
                 <div id="film_comment_div" class="input_div">
                     <h4>3. Opisz obejrzany film</h4>
-                    <textarea id="film_comment_input" class="top_spacer max_width" placeholder="Opis filmu"></textarea>
+                    <textarea id="film_comment_input" name="title_comment" class="top_spacer max_width" placeholder="Opis filmu"></textarea>
                 </div>
-                <input id="hide" type="hidden" value="scislie tajna wiadomosc, shhhh!" />
+                <input id="hide" name="hide" type="hidden" value="scislie tajna wiadomosc, shhhh!" />
                 <div id="buton_div" class="top_spacer">
                     <button class="form_btn" type="submit">Wyslij</button>
                     <button class="form_btn" type="reset">Wyczysc</button>
                 </div>
             </fieldset>
         </form> <!-- 4. Rating -->
-        <form id="five" name="mix" method="post" action="odbior_danych.html">
+        <form id="five" method="post" action="odbior_danych.html">
             <fieldset>
                 <h1>MIX</h1>
                 <h4>Kolory ?</h4>
-                <table class="max_width">
+                <table  class="max_width">
                     <tr>
                         <th>
-                            <input id="red" type="checkbox" value="red" checked />
+                            <input id="red" name="color" type="checkbox" value="red" checked />
                             <label for="red" style="color: red;">Czerwony</label>
                         </th>
                         <th>
-                            <input id="yellow" type="checkbox" value="yellow" />
+                            <input id="yellow" name="color" type="checkbox" value="yellow" />
                             <label for="yellow" style="color: yellow;">Zolty</label>
                         </th>
                         <th>
-                            <input id="green" type="checkbox" value="green" />
+                            <input id="green" name="color" type="checkbox" value="green" />
                             <label for="green" style="color: green;">Zielony</label>
                         </th>
                         <th>
-                            <input id="blue" type="checkbox" value="blue" />
+                            <input id="blue" name="color" type="checkbox" value="blue" />
                             <label for="blue" style="color: blue;">Niebieski</label>
                         </th>
                         <th>
-                            <input id="purple" type="checkbox" value="purple" checked />
+                            <input id="purple" name="color" type="checkbox" value="purple" checked />
                             <label for="purple" style="color: purple;">Fioletowy</label>
                         </th>
                     </tr>
@@ -262,7 +262,7 @@
                         <span class="material-symbols-outlined">
                             call
                         </span>
-                        <input type="tel" id="tel_input" class="login_input" value="+48 " />
+                        <input type="tel" name="tel" id="tel_input" class="login_input" value="+48 " />
                     </div>
                 </div>
                 <h4 class="top_spacer">Wojewodztwo</h4>
@@ -270,7 +270,7 @@
                     <span class="material-symbols-outlined">
                         location_city
                     </span>
-                    <select name="voivodeship" id="select_voivodeship_2">
+                    <select name="voivodeship" name="voivodeship" class="select_voivodeship" id="select_voivodeship_2">
                         <option value="0" disabled hidden>Wybierz</option>
                         <option value="1">Dolnosliaskie</option>
                         <option value="2">Kujawsko-pomorskie</option>
@@ -293,7 +293,7 @@
                 <div class="seperator_div"></div>
                 <div id="comment_div" class="input_div">
                     <h4>Uwagi</h4>
-                    <textarea id="comment_input" class="top_spacer max_width" placeholder=""></textarea>
+                    <textarea id="comment_input" name="mix_comment" class="top_spacer max_width" placeholder=""></textarea>
                 </div>
                 <div id="buton_div" class="top_spacer">
                     <button class="form_btn" type="submit">Wyslij</button>

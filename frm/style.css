@@ -1,5 +1,11 @@
+@font-face {
+    font-family: 'CascadiaCodePL';
+    src: url('./CascadiaCodePL.ttf') format('truetype');
+}
 body {
     background-color: gray;
+    font-family: 'CascadiaCodePL', Fallback, sans-serif;
+    
 }
 fieldset {
     background-color: lightgray;
@@ -146,7 +152,7 @@ h4 {
     margin-left: auto;
     margin-right: auto;
 }
-#select_voivodeship {
+.select_voivodeship {
     width: 90%;
     background-color: transparent;
     border-style: none;
