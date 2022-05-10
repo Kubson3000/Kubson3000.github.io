@@ -99,7 +99,7 @@ function the() {
     for (var i = 0; i < height; i++) {
         for (var j = 0; j < width; j++) {
             if (plane[i][j] == 0){
-                bombcount = false;
+                bombcount = 0;
                 clickedFound = false;
                 checking_index = 0;
                 for (var checking_height = i - 1; checking_height <= i + 1; checking_height++) {
