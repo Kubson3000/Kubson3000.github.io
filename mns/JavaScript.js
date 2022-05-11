@@ -64,15 +64,6 @@ function press(h, w) {
             tile.classList.add("clicked");
             plane[h][w] = 2;
             prep_bombs();
-            var bombcount = 0;
-            for (var cb_height = h - 1; cb_height <= h + 1; cb_height++) {
-                for (var cb_width = w - 1; cb_width <= w + 1; cb_width++) {
-                    if ((cb_height >= 0) && (cb_height < height) && (cb_width >= 0) && (cb_width < width)) {
-                        if (plane[cb_height][cb_width] == 1) bombcount++;
-                    }
-                }
-            }
-            if (bombcount > 0) tile.innerHTML = bombcount;
             the();
         }
         else {
@@ -91,40 +82,60 @@ function press(h, w) {
     }
 }
 
+function inBounds(h, w) {
+    if ((h >= 0) && (w >= 0) && (h < height) && (w < width)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 function the() {
+    var checking_index, bomb_count, clicked_found;
     var updated = false;
-    var bombcount = 0;
-    var clickedFound = false;
-    var checking_index = 0;
     for (var i = 0; i < height; i++) {
         for (var j = 0; j < width; j++) {
-            if (plane[i][j] == 0){
-                bombcount = 0;
-                clickedFound = false;
+            // Going thru the whole plane
+            // 0 = unclicked
+            // 1 = bomb
+            // 2 = clicked
+            if (plane[i][j] == 2) {
                 checking_index = 0;
-                for (var checking_height = i - 1; checking_height <= i + 1; checking_height++) {
-                    for (var checking_width = j - 1; checking_width <= j + 1; checking_width++) {
-                        if ((checking_height >= 0) && (checking_height < height) && (checking_width >= 0) && (checking_width < width)) {
-                            if (plane[checking_height][checking_width] == 1) bombcount++;
-                            else if ((plane[checking_height][checking_width] == 2) && (checking_height % 2 == 1)) clickedFound = true;
+                for (var ch_h = i - 1; ch_h <= i + 1; ch_h++) {
+                    for ( var ch_w = j - 1; ch_w <= j + 1; ch_w++) {
+                        if ((inBounds(ch_h, ch_w)) && ((checking_index % 2 == 1) || (checking_index == 4))) {
+                            // targeting top, left, right and bottom from tile
+                            bomb_count = 0;
+                            clicked_found = false;
+                            for (var ver_h = ch_h - 1; ver_h <= ch_h + 1; ver_h++) {
+                                for (var ver_w = ch_w - 1; ver_w <= ch_w + 1; ver_w++) {
+                                    if (inBounds(ver_h, ver_w)) {
+                                        if (plane[ver_h][ver_w] == 1) bomb_count++;
+                                        if (plane[ver_h][ver_w] == 2) clicked_found = true;
+                                    }
+                                }
+                            }
+                            let ch_tile = document.getElementById("tile_" + ch_h + "_" + ch_w);
+                            if (plane[ch_h][ch_w] == 0) {
+                                if (clicked_found) { 
+                                    plane[ch_h][ch_w] = 2;
+                                    ch_tile.classList.remove("unclicked");
+                                    ch_tile.classList.add("clicked");
+                                    updated = true;
+                                }
+                                if (bomb_count > 0) {
+                                    ch_tile.innerHTML = bomb_count;
+                                }
+                            }
                         }
                         checking_index++;
                     }
-                }
-                if (clickedFound) {
-                    document.getElementById("tile_" + i + "_" + j).classList.remove("unclicked");
-                    document.getElementById("tile_" + i + "_" + j).classList.add("clicked");
-                    if (bombcount == 0) {
-                        plane[i][j] = 2;
-                    }
-                    else document.getElementById("tile_" + i + "_" + j).innerHTML = bombcount;
-                    updated = true;
                 }
             }
         }
     }
     if (updated) {
-        console.log("Pog");
         the();
     }
 }
