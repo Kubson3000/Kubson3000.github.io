@@ -32,10 +32,13 @@ body {
     height: var(--square_size);
     float: left;
     background-color: grey;
+    color: grey;
+    user-select: none;
 }
 .clicked {
     width: var(--square_size);
     height: var(--square_size);
     float: left;
     background-color: aliceblue;
+    color: black;
 }

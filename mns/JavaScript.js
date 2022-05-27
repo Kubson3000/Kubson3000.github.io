@@ -19,18 +19,20 @@ function update_values() {
 }
 
 function start() {
-    document.getElementById("height_input").disabled = true;
-    document.getElementById("width_input").disabled = true;
-    document.getElementById("bombs_input").disabled = true;
-    move_number = 0;
-    area.innerHTML = "";
-    for (var i = 0; i < height; i++) {
-        plane[i] = [];
-        for (var j = 0; j < width; j++) {
-            plane[i][j] = 0;
-            area.innerHTML += "<div id='tile_"+i+"_"+j+"' class='unclicked tile' onclick='press("+i+", "+j+")'></div>";
+    if (bombs < width * height) {
+        document.getElementById("height_input").disabled = true;
+        document.getElementById("width_input").disabled = true;
+        document.getElementById("bombs_input").disabled = true;
+        move_number = 0;
+        area.innerHTML = "";
+        for (var i = 0; i < height; i++) {
+            plane[i] = [];
+            for (var j = 0; j < width; j++) {
+                plane[i][j] = 0;
+                area.innerHTML += "<div id='tile_"+i+"_"+j+"' class='unclicked tile' onclick='press("+i+", "+j+")'></div>";
+            }
+            area.innerHTML += "<div class='spacer'></div>";
         }
-        area.innerHTML += "<div class='spacer'></div>";
     }
 }
 
@@ -55,6 +57,23 @@ function prep_bombs() {
     console.log(plane);
 }
 
+function bombCounter() {
+    for (var h = 0; h < height; h++) {
+        for (var w = 0; w < width; w++) {
+            var counter = 0;
+            let tile = document.getElementById("tile_" + h + "_" + w);
+                for (var i = h - 1; i <= h + 1; i++) {
+                    for (var j = w - 1; j <= w + 1; j++) {
+                        if ((inBounds(i, j)) && (plane[h][w] == 0)) {
+                            if (plane[i][j] == 1) counter++;
+                        }
+                    }
+                }
+            if (counter > 0) tile.innerHTML = counter;
+        }
+    }
+}
+
 function press(h, w) {
     if (isAlive) {
         let div_id = "tile_" + h + "_" + w;
@@ -65,6 +84,16 @@ function press(h, w) {
             plane[h][w] = 2;
             prep_bombs();
             the();
+            bombCounter();
+            var c = 0;
+            for (var c_h = h - 1; c_h <= h + 1; c_h++) {
+                for (var c_w = w - 1; c_w <= w + 1; c_w++) {
+                    if (inBounds(c_h, c_w)) {
+                        if (plane[c_h, c_w] == 1) c++;
+                    }
+                }
+            }
+            if (c > 0) tile.innerHTML = c;
         }
         else {
             if (plane[h][w] == 0) {
@@ -72,6 +101,7 @@ function press(h, w) {
                 tile.classList.add("clicked");
                 plane[h][w] = 2;
                 the();
+                bombCounter();
             }
             else if (plane[h][w] == 1) {
                 isAlive = false;
@@ -94,17 +124,19 @@ function inBounds(h, w) {
 function the() {
     var checking_index, bomb_count, clicked_found;
     var updated = false;
+    bombCounter();
     for (var i = 0; i < height; i++) {
         for (var j = 0; j < width; j++) {
             // Going thru the whole plane
             // 0 = unclicked
             // 1 = bomb
             // 2 = clicked
-            if (plane[i][j] == 2) {
+            let temp = document.getElementById("tile_" + i + "_" + j); 
+            if ((plane[i][j] == 2) && (temp.innerHTML == "")) {
                 checking_index = 0;
                 for (var ch_h = i - 1; ch_h <= i + 1; ch_h++) {
                     for ( var ch_w = j - 1; ch_w <= j + 1; ch_w++) {
-                        if ((inBounds(ch_h, ch_w)) && ((checking_index % 2 == 1) || (checking_index == 4))) {
+                        if ((inBounds(ch_h, ch_w))) {
                             // targeting top, left, right and bottom from tile
                             bomb_count = 0;
                             clicked_found = false;
