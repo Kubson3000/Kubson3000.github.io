@@ -1,5 +1,7 @@
 body {
     background-color: grey;
+    color: white;
+    font-size: 18px;
 }
 .navbar {
     overflow: hidden;
@@ -36,21 +38,58 @@ body {
 }
 .bgc {
     background-color: #444;
-    margin-top: 0.3%;
+    margin-top: 5px;
+}
+.cb{
+    user-select: none;
+    color: grey;
+    clear: both;
+    width: 100%;
+    margin: 10px, 0px;
 }
 .itm {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
-    margin-top: 1.5%;
-    margin-bottom: 1.5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
-#main {
-    color: white;
+.left {
     float: left;
+}
+.w55 {
     width: 55%;
 }
-#side_img {
+.right {
     float: right;
+}
+.w40 {
     width: 40%;
+}
+.vertical-menu {
+    width: 100%;
+    height: 750px;
+    overflow-y: auto;
+}
+.vertical-menu a {
+    background-color: #eee;
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+.vertical-menu a:hover {
+    background-color: #ccc;
+}
+.vertical-menu a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+#list_div {
+    width: 15%;
+    float: left;
+}
+#preview_div {
+    width: 80%;
+    float: right;
 }
